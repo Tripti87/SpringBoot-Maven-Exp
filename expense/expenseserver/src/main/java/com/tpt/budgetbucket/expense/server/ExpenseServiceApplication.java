@@ -1,4 +1,4 @@
-package com.tpt.budgetbucket.customer.server;
+package com.tpt.budgetbucket.expense.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,7 @@ public class ExpenseServiceApplication {
 
 	public static void main(String args[]){
 
-		SpringApplication.run(ExpenseServiceApplication.class, args);
+		SpringApplication
+				.run(ExpenseServiceApplication.class, args);
 	}
 }
