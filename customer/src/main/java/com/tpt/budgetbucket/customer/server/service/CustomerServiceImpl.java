@@ -3,7 +3,6 @@ package com.tpt.budgetbucket.customer.server.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tpt.budgetbucket.customer.server.domain.Address;
@@ -16,28 +15,42 @@ import com.tpt.budgetbucket.customer.server.domain.Customer;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-	@Autowired
-	private Customer customer;
-
-	@Autowired
-	private Address address;
-
 	@Override
-	public List<Customer> getCustomerById(String customerId){
+	public List<Customer> getCustomerByName(String customerId){
 		List<Customer> customers = new ArrayList<>();
 
+		customers.add(getDummyCustomer());
+
+		return customers;
+	}
+
+	private Customer getDummyCustomer() {
+		Customer customer = new Customer();
 		customer.setCustomerId("1");
 		customer.setFirstName("Tripti");
 		customer.setLastName("Gupta");
 		customer.setEmail("gupta@gmail.com");
 		customer.setPhone("123");
 		customer.setStatus("Starter");
+
+		Address address = new Address();
 		address.setCountry("India");
 		address.setCity("Delhi");
 		customer.setAddress(address);
 
-		customers.add(customer);
+		return customer;
+	}
 
-		return customers;
+	@Override
+	public Customer getCustomerById(String CustomerId){
+		return getDummyCustomer();
+	}
+
+	@Override
+	public String postCustomer(Customer customer) {
+		if (customer != null){
+			return "Success";
+		}
+		return "fail";
 	}
 }

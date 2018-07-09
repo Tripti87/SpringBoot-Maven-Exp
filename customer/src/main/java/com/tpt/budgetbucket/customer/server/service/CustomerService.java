@@ -8,5 +8,7 @@ import com.tpt.budgetbucket.customer.server.domain.Customer;
  * Created by gupta on 01.07.2018.
  */
 public interface CustomerService {
-	List<Customer> getCustomerById(String customerId);
+	Customer getCustomerById(String customerId);
+	List<Customer> getCustomerByName(String customerName);
+	String postCustomer(Customer customer);
 }

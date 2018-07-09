@@ -1,15 +1,12 @@
-package com.tpt.budgetbucket.expense.server;
+package com.tpt.budgetbucket.customer.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Created by gupta on 01.07.2018.
- */
 @SpringBootApplication
 public class ExpenseServiceApplication {
 
-	public static void main(String[] args){
+	public static void main(String args[]){
 
 		SpringApplication.run(ExpenseServiceApplication.class, args);
 	}
