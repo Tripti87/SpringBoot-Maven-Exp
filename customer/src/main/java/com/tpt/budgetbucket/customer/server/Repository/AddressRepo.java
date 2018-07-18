@@ -1,4 +1,4 @@
-package com.tpt.budgetbucket.customer.server.domain;
+package com.tpt.budgetbucket.customer.server.Repository;
 
 import org.springframework.stereotype.Component;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class Address {
+public class AddressRepo {
 	private String addressId;
 	private String country;
 	private String city;

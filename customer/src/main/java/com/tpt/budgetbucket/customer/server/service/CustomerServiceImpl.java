@@ -3,8 +3,11 @@ package com.tpt.budgetbucket.customer.server.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tpt.budgetbucket.customer.server.Repository.CustomerRepo;
+import com.tpt.budgetbucket.customer.server.Repository.CustomerRepository;
 import com.tpt.budgetbucket.customer.server.domain.Address;
 import com.tpt.budgetbucket.customer.server.domain.Customer;
 
@@ -14,6 +17,9 @@ import com.tpt.budgetbucket.customer.server.domain.Customer;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	CustomerRepository customerRepository;
 
 	@Override
 	public List<Customer> getCustomerByName(String customerId){
@@ -42,8 +48,12 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Customer getCustomerById(String CustomerId){
-		return getDummyCustomer();
+	public CustomerRepo getCustomerById(String customerId){
+		if (customerId.equals("1") || customerId.equals("abc")){
+			throw new NullPointerException();
+		}
+		//return getDummyCustomer();
+		return customerRepository.getCustomer();
 	}
 
 	@Override

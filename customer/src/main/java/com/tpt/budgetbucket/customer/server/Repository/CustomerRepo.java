@@ -1,20 +1,16 @@
-package com.tpt.budgetbucket.customer.server.domain;
+package com.tpt.budgetbucket.customer.server.Repository;
 
 import org.springframework.stereotype.Component;
 
-/**
- * Created by gupta on 23.06.2018.
- */
 
 @Component
-public class Customer {
+public class CustomerRepo {
 	private String customerId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String phone;
-	private Address Address;
-	//private String addressId;
+	private String addressRepoId;
 	private String status;
 
 	public String getCustomerId() {
@@ -57,12 +53,12 @@ public class Customer {
 		this.phone = phone;
 	}
 
-	public Address getAddress() {
-		return Address;
+	public String getAddressRepoId() {
+		return addressRepoId;
 	}
 
-	public void setAddress(Address address) {
-		Address = address;
+	public void setAddressRepoId(String addressRepoId) {
+		this.addressRepoId = addressRepoId;
 	}
 
 	public String getStatus() {

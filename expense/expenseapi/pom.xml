@@ -3,10 +3,10 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>core</artifactId>
+		<artifactId>expense</artifactId>
 		<groupId>com.tripti</groupId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath>../../core</relativePath>
+		<relativePath>../../expense</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
